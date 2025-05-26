@@ -57,21 +57,62 @@
     <!-- Main Content -->
     <main class="pt-32">
         <!-- Hero Section -->
-        <section id="home" class="min-h-[80vh] flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4">
-            <!-- Photo Side -->
-            <div class="md:w-1/2 w-full h-80 md:h-[80vh] flex items-center justify-center overflow-hidden rounded-3xl md:rounded-none mb-8 md:mb-0">
+        <section id="home" class="relative min-h-[80vh] flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 overflow-hidden">
+            <!-- Photo Side with Overlay -->
+            <div class="md:w-1/2 w-full h-80 md:h-[80vh] flex items-center justify-center relative overflow-hidden rounded-3xl md:rounded-none mb-8 md:mb-0">
                 <img src="profile.jpg" alt="Simran Choudhary" class="object-cover w-full h-full md:rounded-none rounded-3xl shadow-lg" />
+                <div class="absolute inset-0 bg-gradient-to-tr from-dark-900/80 via-dark-800/60 to-primary-700/60 md:rounded-none rounded-3xl"></div>
             </div>
             <!-- Info Side -->
-            <div class="md:w-1/2 w-full flex flex-col items-center md:items-start justify-center px-4">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Hi, I'm <span class="text-primary-500">Simran</span></h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-xl">QA Automation Engineer passionate about building robust, scalable, and efficient test automation solutions. 4+ years of experience in E2E automation, API testing, and CI/CD integration.</p>
+            <div class="md:w-1/2 w-full flex flex-col items-center md:items-start justify-center px-4 z-10">
+                <h1 id="typewriter" class="text-3xl md:text-5xl font-bold text-white mb-4 min-h-[3.5rem]">&nbsp;</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-xl fade-in">QA Automation Engineer passionate about building robust, scalable, and efficient test automation solutions. 4+ years of experience in E2E automation, API testing, and CI/CD integration.</p>
                 <div class="flex gap-4 justify-center md:justify-start">
-                    <a href="#projects" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold shadow transition">View My Work</a>
-                    <a href="#contact" class="border-2 border-primary-500 text-primary-500 px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition">Get In Touch</a>
+                    <a href="#projects" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold shadow transition transform hover:scale-105 active:scale-95">View My Work</a>
+                    <a href="#contact" class="border-2 border-primary-500 text-primary-500 px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition transform hover:scale-105 active:scale-95">Get In Touch</a>
                 </div>
             </div>
         </section>
+
+        <script>
+        // Typewriter effect for hero headline
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = 'Empowering Software Quality with Automation Excellence';
+            const el = document.getElementById('typewriter');
+            let i = 0;
+            function type() {
+                if (i <= text.length) {
+                    el.innerHTML = text.slice(0, i) + '<span class="border-r-2 border-primary-500 animate-pulse">&nbsp;</span>';
+                    i++;
+                    setTimeout(type, 40);
+                } else {
+                    el.innerHTML = text;
+                }
+            }
+            type();
+        });
+        </script>
+
+        <style>
+        /* Fade/slide-in animation */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
+        .fade-in.visible { opacity: 1; transform: none; }
+        .slide-in { opacity: 0; transform: translateY(40px); transition: opacity 0.8s, transform 0.8s; }
+        .slide-in.visible { opacity: 1; transform: none; }
+        </style>
+        <script>
+        // Scroll animation for fade/slide-in
+        function revealOnScroll() {
+            document.querySelectorAll('.fade-in, .slide-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 60) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('DOMContentLoaded', revealOnScroll);
+        </script>
 
         <!-- About Section -->
         <section id="about" class="py-20 px-4 bg-dark-800 rounded-3xl max-w-4xl mx-auto mt-16 shadow-lg">
@@ -268,7 +309,7 @@
     <footer class="bg-dark-800 text-gray-400 py-8 px-6 mt-12">
         <div class="max-w-4xl mx-auto text-center">
             <p>
-                © 2024 Simran Choudhary. Built with passion and attention to detail.
+                © 2025 Simran Choudhary. Built with passion and attention to detail.
             </p>
         </div>
     </footer>
