@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simran Choudhary - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Fixed Sidebar -->
+    <aside class="fixed left-0 top-0 h-full w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out lg:translate-x-0 -translate-x-full" id="sidebar">
+        <div class="flex flex-col h-full">
+            <!-- Profile Section -->
+            <div class="p-6 border-b border-gray-100">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center mx-auto mb-4 hover:scale-105 transition-transform duration-300">
+                        <span class="text-white text-2xl font-bold">SC</span>
+                    </div>
+                    <h1 class="text-xl font-bold text-gray-800 mb-1">Simran Choudhary</h1>
+                    <p class="text-sm text-gray-600">Automation Test Engineer</p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex-1 py-6">
+                <ul class="space-y-2 px-4">
+                    <li>
+                        <a href="#home" class="nav-link flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition-all duration-300 group">
+                            <span class="mr-3">🏠</span>
+                            <span class="font-medium">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition-all duration-300 group">
+                            <span class="mr-3">👋</span>
+                            <span class="font-medium">About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#experience" class="nav-link flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition-all duration-300 group">
+                            <span class="mr-3">💼</span>
+                            <span class="font-medium">Experience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="nav-link flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition-all duration-300 group">
+                            <span class="mr-3">⚡</span>
+                            <span class="font-medium">Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="nav-link flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition-all duration-300 group">
+                            <span class="mr-3">🚀</span>
+                            <span class="font-medium">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition-all duration-300 group">
+                            <span class="mr-3">📫</span>
+                            <span class="font-medium">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Resume Download -->
+            <div class="p-4 border-t border-gray-100">
+                <a href="SimranChoudhary-Resume.pdf" download class="w-full bg-primary-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-700 hover:scale-105 transition-all duration-300 flex items-center justify-center group">
+                    <span class="mr-2">📄</span>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="lg:hidden fixed top-4 left-4 z-50 bg-white p-2 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span class="block w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+            <span class="block w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+            <span class="block w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+        </div>
+    </button>
+
+    <!-- Main Content -->
+    <main class="lg:ml-64 min-h-screen">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-white px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="mb-8 animate-fade-in">
+                    <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-4 hover:scale-105 transition-transform duration-500">
+                        Hi, I'm <span class="text-primary-600">Simran</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                        Automation Test Engineer passionate about quality assurance and innovative testing solutions
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#projects" class="bg-primary-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-primary-700 hover:scale-105 transition-all duration-300 shadow-lg">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-medium hover:bg-primary-600 hover:text-white hover:scale-105 transition-all duration-300">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center hover:scale-105 transition-transform duration-300">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            I'm a dedicated Automation Test Engineer with a passion for ensuring software quality and reliability. 
+                            My expertise lies in creating robust testing frameworks and implementing comprehensive test automation strategies.
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            I believe in the power of automation to improve software development processes and deliver exceptional user experiences. 
+                            My goal is to bridge the gap between development and quality assurance through innovative testing solutions.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-full font-medium hover:scale-105 transition-transform duration-300">Quality Focused</span>
+                            <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-full font-medium hover:scale-105 transition-transform duration-300">Detail Oriented</span>
+                            <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-full font-medium hover:scale-105 transition-transform duration-300">Problem Solver</span>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-100 to-primary-50 p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">What I Do</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-primary-600 mr-3 text-xl">🔍</span>
+                                <span class="text-gray-700">Test Automation Framework Development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-600 mr-3 text-xl">⚙️</span>
+                                <span class="text-gray-700">API Testing & Validation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-600 mr-3 text-xl">🌐</span>
+                                <span class="text-gray-700">Web Application Testing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-600 mr-3 text-xl">📊</span>
+                                <span class="text-gray-700">Test Strategy & Planning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 px-6 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center hover:scale-105 transition-transform duration-300">Experience</h2>
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">Automation Test Engineer</h3>
+                                <p class="text-primary-600 font-medium">Current Role</p>
+                            </div>
+                            <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-full font-medium mt-2 md:mt-0">Present</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-primary-500 mr-3">•</span>
+                                Developed and maintained comprehensive test automation frameworks
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-500 mr-3">•</span>
+                                Implemented CI/CD pipeline integration for automated testing
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-500 mr-3">•</span>
+                                Collaborated with development teams to ensure quality standards
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary-500 mr-3">•</span>
+                                Mentored junior team members on testing best practices
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center hover:scale-105 transition-transform duration-300">Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="skill-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl text-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl mb-3">🐍</div>
+                        <h3 class="font-bold text-gray-800">Python</h3>
+                    </div>
+                    <div class="skill-card bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl mb-3">☕</div>
+                        <h3 class="font-bold text-gray-800">Java</h3>
+                    </div>
+                    <div class="skill-card bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl text-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl mb-3">🤖</div>
+                        <h3 class="font-bold text-gray-800">Selenium</h3>
+                    </div>
+                    <div class="skill-card bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-2xl text-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl mb-3">🌐</div>
+                        <h3 class="font-bold text-gray-800">API Testing</h3>
+                    </div>
+                    <div class="skill-card bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-2xl text-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl mb-3">🔧</div>
+                        <h3 class="font-bold text-gray-800">TestNG</h3>
+                    </div>
+                    <div class="skill-card bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-2xl text-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl mb-3">🐙</div>
+                        <h3 class="font-bold text-gray-800">Git</h3>
+                    </div>
+                    <div class="skill-card bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-2xl text-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl mb-3">🚀</div>
+                        <h3 class="font-bold text-gray-800">CI/CD</h3>
+                    </div>
+                    <div class="skill-card bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-2xl text-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                        <div class="text-4xl mb-3">📊</div>
+                        <h3 class="font-bold text-gray-800">Agile</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-6 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center hover:scale-105 transition-transform duration-300">Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        <div class="text-4xl mb-4">🔧</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Test Automation Framework</h3>
+                        <p class="text-gray-600 mb-6">
+                            Comprehensive automation framework built with Selenium and Python, featuring parallel execution and detailed reporting.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Selenium</span>
+                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">TestNG</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        <div class="text-4xl mb-4">🌐</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">API Testing Suite</h3>
+                        <p class="text-gray-600 mb-6">
+                            Robust API testing solution with automated validation, performance testing, and comprehensive test coverage.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">REST API</span>
+                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Postman</span>
+                            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">Newman</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Test Reporting Dashboard</h3>
+                        <p class="text-gray-600 mb-6">
+                            Interactive dashboard for test results visualization with real-time metrics and detailed analytics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Charts.js</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 bg-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 hover:scale-105 transition-transform duration-300">Get In Touch</h2>
+                <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-12 rounded-3xl">
+                    <p class="text-xl text-gray-700 mb-8">
+                        I'm always interested in discussing new opportunities and innovative testing challenges. Let's connect!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                        <a href="mailto:simran4work@outlook.com" class="bg-primary-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-primary-700 hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                            <span class="mr-2">📧</span>
+                            Email Me
+                        </a>
+                        <a href="https://linkedin.com/in/simran-c-622360129" target="_blank" rel="noopener noreferrer" class="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-medium hover:bg-primary-600 hover:text-white hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                            <span class="mr-2">💼</span>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="lg:ml-64 bg-gray-800 text-white py-8 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-gray-400">
+                © 2024 Simran Choudhary. Built with passion and attention to detail.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
