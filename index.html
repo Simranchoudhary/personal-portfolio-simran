@@ -58,10 +58,13 @@
     <main class="pt-32">
         <!-- Hero Section -->
         <section id="home" class="relative min-h-[80vh] flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 overflow-hidden">
-            <!-- Photo Side with Overlay -->
+            <!-- Photo Side with Enhanced Overlay and Edge Fade -->
             <div class="md:w-1/2 w-full h-80 md:h-[80vh] flex items-center justify-center relative overflow-hidden rounded-3xl md:rounded-none mb-8 md:mb-0">
                 <img src="profile.jpg" alt="Simran Choudhary" class="object-cover w-full h-full md:rounded-none rounded-3xl shadow-lg" />
-                <div class="absolute inset-0 bg-gradient-to-tr from-dark-900/80 via-dark-800/60 to-primary-700/60 md:rounded-none rounded-3xl"></div>
+                <!-- Stronger dark gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-dark-900/90 via-dark-800/80 to-primary-700/70 md:rounded-none rounded-3xl"></div>
+                <!-- Soft fade on the right edge for blending -->
+                <div class="hidden md:block absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-dark-900/95 via-dark-900/0 to-transparent"></div>
             </div>
             <!-- Info Side -->
             <div class="md:w-1/2 w-full flex flex-col items-center md:items-start justify-center px-4 z-10">
