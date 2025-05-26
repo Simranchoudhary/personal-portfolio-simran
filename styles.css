@@ -1,12 +1,45 @@
-/* Custom CSS for additional animations and effects */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
     scroll-behavior: smooth;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* Custom animations */
+/* Navigation Hover Underline */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, #0ea5e9, #0284c7);
+    transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::before {
+    width: 100%;
+}
+.nav-link.active {
+    color: #0369a1;
+}
+
+/* Skill Card Hover */
+.skill-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+}
+.skill-card:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Section Animation */
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -17,84 +50,11 @@
         transform: translateY(0);
     }
 }
-
 .animate-fade-in {
     animation: fade-in 1s ease-out;
 }
 
-/* Enhanced hover effects */
-.nav-link {
-    position: relative;
-    overflow: hidden;
-}
-
-.nav-link::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #0ea5e9, #0284c7);
-    transition: width 0.3s ease-in-out;
-}
-
-.nav-link:hover::before {
-    width: 100%;
-}
-
-.nav-link.active {
-    background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
-    color: #0369a1;
-}
-
-.nav-link.active::before {
-    width: 100%;
-}
-
-/* Skill card hover effects */
-.skill-card {
-    cursor: pointer;
-    transform-origin: center;
-}
-
-.skill-card:hover {
-    transform: scale(1.1) rotate(2deg);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
-}
-
-/* Mobile menu button animation */
-#mobile-menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-#mobile-menu-btn.active span:nth-child(2) {
-    opacity: 0;
-}
-
-#mobile-menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* Gradient text effect */
+/* Gradient Text Utility */
 .gradient-text {
     background: linear-gradient(135deg, #0ea5e9, #0369a1);
     -webkit-background-clip: text;
@@ -102,95 +62,42 @@
     background-clip: text;
 }
 
-/* Enhanced button effects */
-button, .btn {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Enhanced Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }
 
-button:hover, .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-/* Section transitions */
-section {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.6s ease-in-out;
-}
-
-/* Responsive design enhancements */
-@media (max-width: 1024px) {
-    #sidebar {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    #sidebar.open {
-        transform: translateX(0);
-    }
-}
-
-/* Focus states for accessibility */
-a:focus,
-button:focus {
+/* Focus Ring for Accessibility */
+a:focus, button:focus {
     outline: 2px solid #0ea5e9;
     outline-offset: 2px;
 }
 
-/* Loading animation */
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
+/* Responsive Navbar (if needed later) */
+@media (max-width: 768px) {
+    nav.md\\:flex {
+        display: none !important;
     }
 }
 
-.animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+/* Top Navbar Drop Shadow and Stickiness */
+header {
+    backdrop-filter: blur(6px);
 }
 
-/* Parallax effect for hero section */
-#home {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Card flip effect */
-.flip-card {
-    perspective: 1000px;
-}
-
-.flip-card-inner {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Smooth transitions for all interactive elements */
-* {
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Enhanced mobile responsiveness */
-@media (max-width: 640px) {
-    .text-5xl {
-        font-size: 2.5rem;
-    }
-    
-    .text-7xl {
-        font-size: 3rem;
-    }
-    
-    .py-20 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
+/* Section Entry Animations */
+section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease-in-out;
 }
