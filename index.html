@@ -15,11 +15,16 @@
                     },
                     colors: {
                         primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1'
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3'
+                        },
+                        accent: {
+                            500: '#06b6d4',
+                            600: '#0891b2'
                         }
                     }
                 }
@@ -87,7 +92,7 @@
 
             <!-- Resume Download -->
             <div class="p-4 border-t border-gray-100">
-                <a href="SimranChoudhary-Resume.pdf" download class="w-full bg-primary-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-700 hover:scale-105 transition-all duration-300 flex items-center justify-center group">
+                <a href="#" onclick="alert('Please upload your resume PDF file to enable downloads!')" class="w-full bg-primary-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-700 hover:scale-105 transition-all duration-300 flex items-center justify-center group">
                     <span class="mr-2">📄</span>
                     Download Resume
                 </a>
@@ -107,20 +112,21 @@
     <!-- Main Content -->
     <main class="lg:ml-64 min-h-screen">
         <!-- Home Section -->
-        <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-white px-6">
-            <div class="text-center max-w-4xl mx-auto">
+        <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="m0 40l40-40h-40v40zm0 0h40v-40l-40 40z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+            <div class="text-center max-w-4xl mx-auto relative z-10">
                 <div class="mb-8 animate-fade-in">
-                    <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-4 hover:scale-105 transition-transform duration-500">
-                        Hi, I'm <span class="text-primary-600">Simran</span>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 hover:scale-105 transition-transform duration-500">
+                        Hi, I'm <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">Simran</span>
                     </h1>
-                    <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                         Automation Test Engineer passionate about quality assurance and innovative testing solutions
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#projects" class="bg-primary-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-primary-700 hover:scale-105 transition-all duration-300 shadow-lg">
+                        <a href="#projects" class="bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-xl font-medium hover:from-primary-700 hover:to-primary-800 hover:scale-105 transition-all duration-300 shadow-xl">
                             View My Work
                         </a>
-                        <a href="#contact" class="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-medium hover:bg-primary-600 hover:text-white hover:scale-105 transition-all duration-300">
+                        <a href="#contact" class="border-2 border-primary-500 text-primary-400 px-8 py-4 rounded-xl font-medium hover:bg-primary-600 hover:text-white hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                             Get In Touch
                         </a>
                     </div>
@@ -251,46 +257,80 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 px-6 bg-gray-50">
+        <section id="projects" class="py-20 px-6 bg-gradient-to-br from-gray-50 to-white">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center hover:scale-105 transition-transform duration-300">Projects</h2>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 text-center hover:scale-105 transition-transform duration-300">My Projects</h2>
+                <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">Here are some of my key automation testing projects. You can easily customize these with your own work!</p>
+                
+                <!-- PROJECT CUSTOMIZATION GUIDE -->
+                <!-- To update projects, simply edit the content below:
+                     1. Change the emoji in the <div class="text-4xl mb-4">🔧</div> section
+                     2. Update the project title in <h3>Project Name</h3>
+                     3. Modify the description in the <p> tag
+                     4. Update technology tags in the <span> elements
+                     5. Add GitHub/demo links if needed -->
+                
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                        <div class="text-4xl mb-4">🔧</div>
+                    <!-- Project 1 - Easy to customize -->
+                    <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔧</div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Test Automation Framework</h3>
-                        <p class="text-gray-600 mb-6">
+                        <p class="text-gray-600 mb-6 leading-relaxed">
                             Comprehensive automation framework built with Selenium and Python, featuring parallel execution and detailed reporting.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Python</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Selenium</span>
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">TestNG</span>
+                            <span class="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                            <span class="bg-gradient-to-r from-green-100 to-green-200 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Selenium</span>
+                            <span class="bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">TestNG</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="text-primary-600 hover:text-primary-700 font-medium text-sm hover:underline">View Details</button>
+                            <button class="text-gray-500 hover:text-gray-700 font-medium text-sm hover:underline">GitHub</button>
                         </div>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                        <div class="text-4xl mb-4">🌐</div>
+
+                    <!-- Project 2 - Easy to customize -->
+                    <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌐</div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">API Testing Suite</h3>
-                        <p class="text-gray-600 mb-6">
+                        <p class="text-gray-600 mb-6 leading-relaxed">
                             Robust API testing solution with automated validation, performance testing, and comprehensive test coverage.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">REST API</span>
-                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Postman</span>
-                            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm">Newman</span>
+                            <span class="bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">REST API</span>
+                            <span class="bg-gradient-to-r from-red-100 to-red-200 text-red-700 px-3 py-1 rounded-full text-sm font-medium">Postman</span>
+                            <span class="bg-gradient-to-r from-indigo-100 to-indigo-200 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">Newman</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="text-primary-600 hover:text-primary-700 font-medium text-sm hover:underline">View Details</button>
+                            <button class="text-gray-500 hover:text-gray-700 font-medium text-sm hover:underline">GitHub</button>
                         </div>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                        <div class="text-4xl mb-4">📊</div>
+
+                    <!-- Project 3 - Easy to customize -->
+                    <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📊</div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Test Reporting Dashboard</h3>
-                        <p class="text-gray-600 mb-6">
+                        <p class="text-gray-600 mb-6 leading-relaxed">
                             Interactive dashboard for test results visualization with real-time metrics and detailed analytics.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Charts.js</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+                            <span class="bg-gradient-to-r from-teal-100 to-teal-200 text-teal-700 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="bg-gradient-to-r from-pink-100 to-pink-200 text-pink-700 px-3 py-1 rounded-full text-sm font-medium">Charts.js</span>
+                            <span class="bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">HTML/CSS</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="text-primary-600 hover:text-primary-700 font-medium text-sm hover:underline">View Details</button>
+                            <button class="text-gray-500 hover:text-gray-700 font-medium text-sm hover:underline">GitHub</button>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Easy customization note -->
+                <div class="mt-12 text-center">
+                    <p class="text-sm text-gray-500 bg-gray-100 rounded-lg p-4 max-w-2xl mx-auto">
+                        💡 <strong>Customize easily:</strong> Edit the project cards above in the HTML file to showcase your own automation testing projects, tools, and achievements!
+                    </p>
                 </div>
             </div>
         </section>
