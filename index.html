@@ -57,13 +57,19 @@
     <!-- Main Content -->
     <main class="pt-32">
         <!-- Hero Section -->
-        <section id="home" class="min-h-[80vh] flex flex-col items-center justify-center text-center px-4">
-            <img src="profile.jpg" alt="Simran Choudhary" class="w-36 h-36 rounded-full object-cover border-4 border-primary-600 shadow-lg mb-6">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Hi, I'm <span class="text-primary-500">Simran</span></h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-2xl">QA Automation Engineer passionate about building robust, scalable, and efficient test automation solutions. 4+ years of experience in E2E automation, API testing, and CI/CD integration.</p>
-            <div class="flex gap-4 justify-center">
-                <a href="#projects" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold shadow transition">View My Work</a>
-                <a href="#contact" class="border-2 border-primary-500 text-primary-500 px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition">Get In Touch</a>
+        <section id="home" class="min-h-[80vh] flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4">
+            <!-- Photo Side -->
+            <div class="md:w-1/2 w-full h-80 md:h-[80vh] flex items-center justify-center overflow-hidden rounded-3xl md:rounded-none mb-8 md:mb-0">
+                <img src="profile.jpg" alt="Simran Choudhary" class="object-cover w-full h-full md:rounded-none rounded-3xl shadow-lg" />
+            </div>
+            <!-- Info Side -->
+            <div class="md:w-1/2 w-full flex flex-col items-center md:items-start justify-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Hi, I'm <span class="text-primary-500">Simran</span></h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-6 max-w-xl">QA Automation Engineer passionate about building robust, scalable, and efficient test automation solutions. 4+ years of experience in E2E automation, API testing, and CI/CD integration.</p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold shadow transition">View My Work</a>
+                    <a href="#contact" class="border-2 border-primary-500 text-primary-500 px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition">Get In Touch</a>
+                </div>
             </div>
         </section>
 
@@ -155,6 +161,45 @@
         <section id="projects" class="py-20 px-4 max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-primary-500 mb-10 text-center">My Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- CSRTOOL Project -->
+                <div class="group bg-dark-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-dark-700">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔧</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">CSRTOOL (Customer Support Tool)</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Developed and maintained an end-to-end automation framework with 1000+ test cases using Robot Framework and Cypress. Automated Web UI and APIs to streamline package testing and enhance accuracy and efficiency. Managed defects and collaborated with developers to ensure quick turnaround and higher product quality.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gradient-to-r from-orange-700 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Robot Framework</span>
+                        <span class="bg-gradient-to-r from-green-700 to-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Cypress</span>
+                        <span class="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Web UI & API</span>
+                    </div>
+                </div>
+                <!-- Scoop Project -->
+                <div class="group bg-dark-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-dark-700">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌐</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">Scoop (Feedback-as-a-Service Platform)</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Implemented UI automation using Playwright, leading to a 90% increase in test coverage and release confidence. Automated the API test cases and increased the test coverage to 75%. Maintained test plans, executed test cycles, and identified key bugs early in the development lifecycle.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Playwright</span>
+                        <span class="bg-gradient-to-r from-purple-700 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">UI Automation</span>
+                        <span class="bg-gradient-to-r from-teal-700 to-teal-500 text-white px-3 py-1 rounded-full text-sm font-medium">API Testing</span>
+                    </div>
+                </div>
+                <!-- USSD Project -->
+                <div class="group bg-dark-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-dark-700">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📱</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">USSD V2 Application Testing</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Led end-to-end functional testing for the new release of the USSD V2 application, ensuring all core functionalities met business requirements. Owned stakeholder communication, gathering requirements, clarifying user flows, and aligning QA activities with expectations. Designed and executed comprehensive test cases covering multiple user journeys and edge cases. Automated UI and API tests using Cypress, increasing test coverage up to 65% and reducing regression time significantly.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gradient-to-r from-green-700 to-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Cypress</span>
+                        <span class="bg-gradient-to-r from-indigo-700 to-indigo-500 text-white px-3 py-1 rounded-full text-sm font-medium">E2E Testing</span>
+                        <span class="bg-gradient-to-r from-pink-700 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">Business Analysis</span>
+                    </div>
+                </div>
                 <!-- Example Project Card -->
                 <div class="group bg-dark-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-dark-700">
                     <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧪</div>
@@ -189,6 +234,18 @@
                     </div>
                 </div>
                 <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-16 px-4 max-w-3xl mx-auto">
+            <div class="bg-dark-800 p-10 rounded-3xl shadow-lg text-center border border-dark-700">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-500 mb-6">Achievements</h2>
+                <ul class="text-lg text-gray-300 space-y-4">
+                    <li>🏆 <strong>Innovation Catalyst Award (2024)</strong> at Annual Business Seminar for pioneering Playwright automation in the Scoop project. Initiated and implemented a successful POC, becoming the first in the domain to adopt Playwright.</li>
+                    <li>⚡ <strong>Flash Award</strong> (Best performance of the semester) for 1H 2021, 1H 2023, 1H 2024.</li>
+                    <li>🌟 <strong>Best New Joiner Award</strong> for revamping CSRTool's test suite within 5 months, improving test coverage and reducing manual effort by optimizing core workflows.</li>
+                </ul>
             </div>
         </section>
 
